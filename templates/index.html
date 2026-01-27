@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEÓN TATTO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="page">
+        <header class="hero">
+            <nav class="nav">
+                <div class="brand">NEÓN<span>TATTO</span></div>
+                <div class="nav-links">
+                    <a href="#artists">Artistas</a>
+                    <a href="#portfolio">Portafolio</a>
+                    <a href="#book">Reserva</a>
+                    <a href="#contact">Contacto</a>
+                </div>
+            </nav>
+
+            <div class="hero-content">
+                <p class="eyebrow">Calle, oficio, legado</p>
+                <h1>Mitlan vibra en neón.</h1>
+                <p class="lead">
+                    Un espacio oscuro donde el verde y el morado laten como ciudad
+                    y madrugada. El viaje al Mitlan camina con dos hermanos de oficio
+                    y calle: Daniel Acoltzi Velasco y Juan Sebastian Acoltzi Velasco.
+                    Estilo prehispánico tradicional con elegancia malandra, piel que
+                    cuenta historia y respeto.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#portfolio">Ver portafolio</a>
+                    <a class="btn btn-ghost" href="#book">Reservar sesión</a>
+                </div>
+            </div>
+
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </header>
+
+        <main>
+            <section id="artists" class="section artists">
+                <div class="section-header">
+                    <p class="section-eyebrow">Artistas</p>
+                    <h2>Hermandad, calle y ceremonia.</h2>
+                    <p>
+                        Dos manos, un mismo pulso: elegancia malandra, trabajo duro y raíz antigua.
+                    </p>
+                </div>
+
+                <div class="artist-grid">
+                    <article class="artist-card">
+                        <div class="artist-badge">Daniel Acoltzi Velasco</div>
+                        <p class="artist-handle">@_yolteotl_</p>
+                        <h3>Ritual prehispánico y línea sagrada</h3>
+                        <p>
+                            Tinta que respira tierra y fuego. Geometría ceremonial,
+                            silencio profundo y un pulso de calle que no se rinde.
+                        </p>
+                        <ul class="tags">
+                            <li>Geométrico</li>
+                            <li>Ritual</li>
+                            <li>Línea</li>
+                        </ul>
+                    </article>
+
+                    <article class="artist-card">
+                        <div class="artist-badge">Juan Sebastian Acoltzi Velasco</div>
+                        <p class="artist-handle">@katman_tattoo</p>
+                        <h3>Mitología viva y negro profundo</h3>
+                        <p>
+                            Noche de calle, oficio de años. Figuras del Mitlan,
+                            contraste feroz y neón que corta la sombra.
+                        </p>
+                        <ul class="tags">
+                            <li>Mitología</li>
+                            <li>Blackwork</li>
+                            <li>Textura</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section id="portfolio" class="section portfolio">
+                <div class="section-header">
+                    <p class="section-eyebrow">Portafolio</p>
+                    <h2>Galería minimal</h2>
+                    <p>
+                        Piezas breves y filosas: raíz antigua, brillo de calle y corazón firme.
+                    </p>
+                </div>
+
+                <div class="gallery">
+                    <article class="gallery-item tone-a span-2">
+                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
+                        <h3>Guardián del fuego</h3>
+                    </article>
+                    <article class="gallery-item tone-b">
+                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
+                        <h3>Ruta obsidiana</h3>
+                    </article>
+                    <article class="gallery-item tone-c">
+                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
+                        <h3>Serpiente de luz</h3>
+                    </article>
+                    <article class="gallery-item tone-d span-row-2">
+                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
+                        <h3>Portal ritual</h3>
+                    </article>
+                    <article class="gallery-item tone-e">
+                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
+                        <h3>Águila nocturna</h3>
+                    </article>
+                    <article class="gallery-item tone-f span-2">
+                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
+                        <h3>Rostro del inframundo</h3>
+                    </article>
+                    <article class="gallery-item tone-g">
+                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
+                        <h3>Sendero sagrado</h3>
+                    </article>
+                    <article class="gallery-item tone-h">
+                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
+                        <h3>Corazón de jade</h3>
+                    </article>
+                </div>
+            </section>
+
+            <section id="book" class="section cta">
+                <div class="cta-card">
+                    <p class="section-eyebrow">Citas</p>
+                    <h2>Traza tu ruta al Mitlan</h2>
+                    <p>
+                        Cuenta tu idea, tu lugar y tu historia. Creamos una pieza
+                        con raíz prehispánica, trabajo duro y neón vivo.
+                    </p>
+                    <div class="cta-actions">
+                        <a class="btn btn-primary" href="mailto:book@neotattoo.studio">
+                            Agenda tu cita
+                        </a>
+                        <a class="btn btn-ghost" href="#artists">Conoce a los artistas</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section contact">
+                <div class="section-header">
+                    <p class="section-eyebrow">Contacto</p>
+                    <h2>Dirección y líneas directas</h2>
+                    <p>
+                        Ven a la cueva de neón o escríbenos directo para agendar.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <h3>Ubicación</h3>
+                        <p class="contact-line">
+                            90400 Blvd. Francisco I. Madero 304, Centro, 90300, 90400
+                            Cdad. de Apizaco, Tlax.
+                        </p>
+                        <p class="contact-line">
+                            Teléfono: <a href="tel:+524425972966">442 597 2966</a>
+                        </p>
+                    </article>
+
+                    <article class="contact-card">
+                        <h3>WhatsApp & correo</h3>
+                        <p class="contact-line">
+                            Sebastian: <a href="https://wa.me/5212413414653">+52 1 241 341 4653</a>
+                        </p>
+                        <p class="contact-line">
+                            Correo: <a href="mailto:acoltzisebastian2@gmail.com">acoltzisebastian2@gmail.com</a>
+                        </p>
+                        <p class="contact-line">
+                            Daniel: <a href="https://wa.me/522413414653">+52 241 341 4653</a>
+                        </p>
+                    </article>
+
+                    <article class="contact-card contact-map">
+                        <h3>Mapa</h3>
+                        <div class="map-frame" role="img" aria-label="Mapa de ubicación">
+                            <iframe
+                                title="Mapa NEÓN TATTO"
+                                src="{{ maps_embed_url }}"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 NEÓN TATTO — Viaje al Mitlan</p>
+        </footer>
+    </div>
+
+</body>
+</html>
