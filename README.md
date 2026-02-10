@@ -1,35 +1,18 @@
-# neotatto
+# NeoTatto — Tattoo Portfolio
 
-neotatto - A new project
+NeoTatto presents the artist portfolio, styles, and ways to book a session.
+NeoTatto presenta el portafolio del artista, estilos y como agendar una sesion.
 
-## Setup
+🔗 **Live / En vivo:** https://neotatto.omar-xyz.shop
+🌐 **Language / Idioma:** English / Espanol
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
+---
 
-## Run
+## Highlights / Lo mas importante
+- Browse tattoo styles and work / Ver estilos y trabajos de tatuaje
+- Get studio and artist info / Conocer info del estudio y artista
+- Contact for bookings / Contacto para reservas
 
-```bash
-python3 run.py
-```
+---
 
-## Deploy
-
-```bash
-sudo python3 scripts/autodeploy_all.py --project 18-neotatto
-```
-
-## Environment Variables
-
-Create `.env` file:
-```
-FLASK_ENV=development
-PORT=5005
-```
-
-🔗 **Live:** [Coming soon](https://example.com)
-
-Created: 2026-01-27
+© 2026 Omar Gabriel Salvatierra Garcia

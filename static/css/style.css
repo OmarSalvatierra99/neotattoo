@@ -1,17 +1,16 @@
 :root {
-    --bg: #04050c;
-    --bg-soft: #0a0f1f;
-    --text: #e8f3ff;
-    --muted: #8ea6c8;
-    --neon-cyan: #24d8ff;
-    --neon-pink: #ff3ccf;
-    --neon-purple: #6b2cff;
-    --neon-green: #35ff7a;
-    --card-border: rgba(107, 44, 255, 0.4);
-    --card-bg: rgba(8, 12, 26, 0.78);
-    --shadow: 0 16px 40px rgba(18, 14, 48, 0.45);
-    --font-body: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
-    --font-display: "Oswald", "Segoe UI", Helvetica, Arial, sans-serif;
+    --bg: #0b0a07;
+    --bg-soft: #14110c;
+    --text: #f6f1e9;
+    --muted: #b7aa97;
+    --accent-gold: #e6b65c;
+    --accent-clay: #c1563e;
+    --accent-jade: #2c7a6f;
+    --card-border: rgba(230, 182, 92, 0.2);
+    --card-bg: rgba(16, 13, 9, 0.72);
+    --shadow: 0 12px 30px rgba(7, 5, 2, 0.35);
+    --font-body: "Sora", "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-display: "Cormorant Garamond", "Times New Roman", serif;
 }
 
 *,
@@ -24,8 +23,9 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(1200px 600px at 10% -10%, rgba(53, 255, 122, 0.12), transparent 60%),
-        radial-gradient(900px 500px at 110% 10%, rgba(107, 44, 255, 0.14), transparent 65%),
+    background:
+        radial-gradient(900px 540px at 12% -20%, rgba(230, 182, 92, 0.12), transparent 68%),
+        linear-gradient(180deg, rgba(18, 15, 10, 0.92), rgba(11, 10, 7, 0.98)),
         var(--bg);
     color: var(--text);
     font-family: var(--font-body);
@@ -50,10 +50,10 @@ a {
 .hero {
     position: relative;
     overflow: hidden;
-    padding: 28px clamp(20px, 4vw, 64px) 90px;
-    border-bottom: 1px solid rgba(107, 44, 255, 0.3);
+    padding: 32px clamp(20px, 4vw, 64px) 100px;
+    border-bottom: 1px solid rgba(230, 182, 92, 0.2);
     background:
-        linear-gradient(120deg, rgba(107, 44, 255, 0.22), rgba(53, 255, 122, 0.08) 55%, rgba(53, 255, 122, 0.14));
+        linear-gradient(160deg, rgba(193, 86, 62, 0.18), rgba(20, 16, 11, 0.9) 55%, rgba(44, 122, 111, 0.12));
 }
 
 .nav {
@@ -66,19 +66,17 @@ a {
 }
 
 .brand {
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    font-size: 1.08rem;
     color: var(--text);
     font-family: var(--font-display);
     text-transform: uppercase;
-    text-shadow:
-        0 0 12px rgba(53, 255, 122, 0.35),
-        0 0 28px rgba(107, 44, 255, 0.35);
+    text-shadow: 0 18px 32px rgba(7, 5, 2, 0.6);
 }
 
 .brand span {
-    color: var(--neon-green);
+    color: var(--accent-gold);
 }
 
 .nav-links {
@@ -89,8 +87,8 @@ a {
 }
 
 .nav-links a {
-    padding: 8px 10px;
-    border-radius: 10px;
+    padding: 8px 12px;
+    border-radius: 999px;
     color: var(--muted);
     transition: all 180ms ease;
 }
@@ -98,10 +96,10 @@ a {
 .nav-links a:hover,
 .nav-links a:focus-visible {
     color: var(--text);
-    background: rgba(53, 255, 122, 0.12);
+    background: rgba(230, 182, 92, 0.12);
     box-shadow:
-        0 0 0 1px rgba(53, 255, 122, 0.3),
-        0 0 24px rgba(107, 44, 255, 0.18);
+        0 0 0 1px rgba(230, 182, 92, 0.22),
+        0 12px 24px rgba(7, 5, 2, 0.28);
 }
 
 .hero-content {
@@ -109,33 +107,32 @@ a {
     margin-top: clamp(40px, 7vw, 90px);
     position: relative;
     z-index: 2;
+    animation: riseIn 0.9s ease both;
 }
 
 .eyebrow {
     text-transform: uppercase;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.24em;
     font-weight: 700;
-    font-size: 0.78rem;
-    color: var(--neon-green);
-    margin: 0 0 10px;
+    font-size: 0.72rem;
+    color: var(--accent-gold);
+    margin: 0 0 12px;
 }
 
 .hero h1 {
     font-family: var(--font-display);
-    font-size: clamp(2.6rem, 6vw, 4.8rem);
-    line-height: 1.02;
-    margin: 0 0 18px;
-    letter-spacing: 0.02em;
-    text-shadow:
-        0 0 20px rgba(107, 44, 255, 0.55),
-        0 0 50px rgba(53, 255, 122, 0.22);
+    font-size: clamp(2.8rem, 6.5vw, 5.1rem);
+    line-height: 1;
+    margin: 0 0 20px;
+    letter-spacing: 0.04em;
+    text-shadow: 0 18px 30px rgba(7, 5, 2, 0.45);
 }
 
 .lead {
-    font-size: clamp(1.02rem, 2.1vw, 1.25rem);
+    font-size: clamp(1.02rem, 2.2vw, 1.3rem);
     color: var(--muted);
-    margin: 0 0 28px;
-    max-width: 62ch;
+    margin: 0 0 30px;
+    max-width: 60ch;
 }
 
 .hero-actions {
@@ -162,63 +159,63 @@ a {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--neon-green), var(--neon-purple) 55%, var(--neon-green));
-    color: #03050a;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-clay) 55%, var(--accent-gold));
+    color: #120c06;
     box-shadow:
-        0 12px 30px rgba(107, 44, 255, 0.55),
-        0 0 30px rgba(53, 255, 122, 0.35);
+        0 12px 28px rgba(7, 5, 2, 0.35),
+        0 0 20px rgba(230, 182, 92, 0.18);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
     box-shadow:
-        0 16px 45px rgba(107, 44, 255, 0.65),
-        0 0 40px rgba(53, 255, 122, 0.45);
+        0 18px 45px rgba(7, 5, 2, 0.55),
+        0 0 36px rgba(230, 182, 92, 0.35);
 }
 
 .btn-ghost {
     color: var(--text);
-    border-color: rgba(53, 255, 122, 0.35);
-    background: rgba(12, 18, 40, 0.6);
+    border-color: rgba(230, 182, 92, 0.4);
+    background: rgba(20, 16, 11, 0.7);
     box-shadow:
-        inset 0 0 0 1px rgba(53, 255, 122, 0.12),
-        0 10px 30px rgba(107, 44, 255, 0.18);
+        inset 0 0 0 1px rgba(230, 182, 92, 0.1),
+        0 10px 24px rgba(7, 5, 2, 0.22);
 }
 
 .btn-ghost:hover,
 .btn-ghost:focus-visible {
-    border-color: rgba(53, 255, 122, 0.7);
+    border-color: rgba(230, 182, 92, 0.7);
     box-shadow:
-        inset 0 0 0 1px rgba(53, 255, 122, 0.2),
-        0 16px 40px rgba(107, 44, 255, 0.28);
+        inset 0 0 0 1px rgba(230, 182, 92, 0.2),
+        0 16px 40px rgba(7, 5, 2, 0.35);
 }
 
 .hero-glow {
     position: absolute;
-    filter: blur(20px);
-    opacity: 0.55;
+    filter: blur(30px);
+    opacity: 0.35;
     pointer-events: none;
     z-index: 1;
 }
 
 .hero-glow-1 {
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(53, 255, 122, 0.75), transparent 65%);
-    top: -120px;
-    right: -40px;
-    animation: floatGlow 12s ease-in-out infinite;
-}
-
-.hero-glow-2 {
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(107, 44, 255, 0.7), transparent 70%);
-    bottom: -160px;
-    left: -80px;
-    animation: floatGlow 14s ease-in-out infinite reverse;
+    background: radial-gradient(circle, rgba(230, 182, 92, 0.45), transparent 65%);
+    top: -160px;
+    right: -80px;
+    animation: floatGlow 16s ease-in-out infinite;
+}
+
+.hero-glow-2 {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(44, 122, 111, 0.4), transparent 70%);
+    bottom: -180px;
+    left: -120px;
+    animation: floatGlow 18s ease-in-out infinite reverse;
 }
 
 @keyframes floatGlow {
@@ -228,6 +225,28 @@ a {
     }
     50% {
         transform: translate3d(0, -12px, 0) scale(1.04);
+    }
+}
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes softIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 12px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -249,10 +268,10 @@ main {
 .section-eyebrow {
     margin: 0 0 6px;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-weight: 800;
-    font-size: 0.76rem;
-    color: var(--neon-green);
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    font-size: 0.72rem;
+    color: var(--accent-gold);
 }
 
 .section h2 {
@@ -274,8 +293,20 @@ main {
     gap: 18px;
 }
 
+.story-card {
+    grid-template-columns: 1fr;
+    min-height: 220px;
+}
+
+.story-card h3 {
+    margin: 0 0 8px;
+}
+
 .artist-card {
     position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 160px) minmax(0, 1fr);
+    gap: 18px;
     padding: 22px;
     border-radius: 18px;
     background: var(--card-bg);
@@ -285,42 +316,92 @@ main {
     isolation: isolate;
 }
 
+.artist-card-feature {
+    grid-column: 1 / -1;
+}
+
 .artist-card::before {
     content: "";
     position: absolute;
     inset: -40% auto auto -30%;
     width: 240px;
     height: 240px;
-    background: radial-gradient(circle, rgba(53, 255, 122, 0.18), transparent 70%);
+    background: radial-gradient(circle, rgba(230, 182, 92, 0.18), transparent 70%);
     z-index: -1;
     transform: rotate(12deg);
 }
 
 .artist-card:nth-child(2)::before {
     inset: auto -30% -55% auto;
-    background: radial-gradient(circle, rgba(107, 44, 255, 0.2), transparent 72%);
+    background: radial-gradient(circle, rgba(44, 122, 111, 0.2), transparent 72%);
     transform: rotate(-8deg);
+}
+
+.artist-photo {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 180px;
+    border: 1px solid rgba(230, 182, 92, 0.16);
+    box-shadow: 0 12px 24px rgba(7, 5, 2, 0.32);
+}
+
+.artist-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.team-avatar {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid rgba(230, 182, 92, 0.75);
+    box-shadow:
+        0 16px 32px rgba(7, 5, 2, 0.38),
+        0 0 0 6px rgba(20, 16, 11, 0.86);
+    display: block;
+    margin: 14px auto;
+}
+
+.artist-photo-placeholder {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(145deg, rgba(230, 182, 92, 0.4), rgba(16, 13, 9, 0.95));
+    color: var(--text);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.artist-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .artist-badge {
     display: inline-flex;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 999px;
-    font-weight: 800;
-    font-size: 0.78rem;
-    letter-spacing: 0.04em;
-    color: #05070f;
-    background: linear-gradient(120deg, var(--neon-green), var(--neon-purple));
+    font-weight: 700;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    color: #120c06;
+    background: linear-gradient(120deg, var(--accent-gold), var(--accent-clay));
     margin-bottom: 10px;
 }
 
 .artist-handle {
     margin: 0 0 6px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-size: 0.72rem;
-    color: var(--neon-green);
+    font-size: 0.68rem;
+    color: var(--accent-gold);
 }
 
 .artist-card h3 {
@@ -347,11 +428,68 @@ main {
 .tags li {
     padding: 6px 10px;
     border-radius: 10px;
-    border: 1px solid rgba(107, 44, 255, 0.5);
-    background: rgba(12, 16, 34, 0.85);
+    border: 1px solid rgba(230, 182, 92, 0.25);
+    background: rgba(18, 14, 10, 0.8);
     color: var(--text);
-    font-weight: 700;
-    font-size: 0.84rem;
+    font-weight: 600;
+    font-size: 0.82rem;
+}
+
+.tattoo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tattoo-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(230, 182, 92, 0.2);
+    background: rgba(16, 13, 9, 0.72);
+    box-shadow: 0 14px 32px rgba(7, 5, 2, 0.35);
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: flex-end;
+}
+
+.tattoo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(170deg, rgba(11, 10, 7, 0.7), rgba(11, 10, 7, 0.18) 60%, rgba(11, 10, 7, 0.85));
+    z-index: 1;
+}
+
+.tattoo-media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(8%) contrast(112%);
+}
+
+.tattoo-card figcaption {
+    position: relative;
+    z-index: 2;
+    padding: 18px;
+}
+
+.tattoo-meta {
+    margin: 0 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.tattoo-card h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
 }
 
 .gallery {
@@ -362,16 +500,20 @@ main {
     grid-auto-flow: dense;
 }
 
+.process-grid .gallery-item {
+    min-height: 180px;
+}
+
 .gallery-item {
     position: relative;
     border-radius: 18px;
-    padding: 18px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: rgba(8, 12, 26, 0.62);
-    border: 1px solid rgba(53, 255, 122, 0.22);
-    box-shadow: 0 18px 40px rgba(8, 12, 26, 0.45);
+    background: rgba(16, 13, 9, 0.72);
+    border: 1px solid rgba(230, 182, 92, 0.22);
+    box-shadow: 0 18px 40px rgba(7, 5, 2, 0.45);
     overflow: hidden;
     isolation: isolate;
 }
@@ -380,7 +522,7 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(140deg, rgba(4, 5, 12, 0.78), transparent 60%);
+    background: linear-gradient(140deg, rgba(11, 10, 7, 0.82), transparent 60%);
     z-index: 0;
 }
 
@@ -390,8 +532,8 @@ main {
     inset: -30% auto auto -30%;
     width: 220px;
     height: 220px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 70%);
-    opacity: 0.25;
+    background: radial-gradient(circle, rgba(230, 182, 92, 0.2), transparent 70%);
+    opacity: 0.3;
     z-index: 0;
     transform: rotate(12deg);
 }
@@ -426,35 +568,35 @@ main {
 }
 
 .tone-a {
-    background: linear-gradient(145deg, rgba(107, 44, 255, 0.65), rgba(8, 12, 26, 0.9));
+    background: linear-gradient(145deg, rgba(193, 86, 62, 0.55), rgba(16, 13, 9, 0.94));
 }
 
 .tone-b {
-    background: linear-gradient(155deg, rgba(53, 255, 122, 0.6), rgba(8, 12, 26, 0.9));
+    background: linear-gradient(155deg, rgba(230, 182, 92, 0.5), rgba(16, 13, 9, 0.92));
 }
 
 .tone-c {
-    background: linear-gradient(165deg, rgba(53, 255, 122, 0.45), rgba(8, 12, 26, 0.92));
+    background: linear-gradient(165deg, rgba(44, 122, 111, 0.45), rgba(16, 13, 9, 0.94));
 }
 
 .tone-d {
-    background: linear-gradient(150deg, rgba(107, 44, 255, 0.6), rgba(8, 12, 26, 0.92));
+    background: linear-gradient(150deg, rgba(193, 86, 62, 0.55), rgba(16, 13, 9, 0.92));
 }
 
 .tone-e {
-    background: linear-gradient(150deg, rgba(53, 255, 122, 0.52), rgba(8, 12, 26, 0.9));
+    background: linear-gradient(150deg, rgba(230, 182, 92, 0.45), rgba(16, 13, 9, 0.92));
 }
 
 .tone-f {
-    background: linear-gradient(150deg, rgba(107, 44, 255, 0.7), rgba(8, 12, 26, 0.92));
+    background: linear-gradient(150deg, rgba(44, 122, 111, 0.5), rgba(16, 13, 9, 0.92));
 }
 
 .tone-g {
-    background: linear-gradient(160deg, rgba(53, 255, 122, 0.5), rgba(8, 12, 26, 0.92));
+    background: linear-gradient(160deg, rgba(193, 86, 62, 0.45), rgba(16, 13, 9, 0.92));
 }
 
 .tone-h {
-    background: linear-gradient(165deg, rgba(107, 44, 255, 0.6), rgba(8, 12, 26, 0.92));
+    background: linear-gradient(165deg, rgba(230, 182, 92, 0.55), rgba(16, 13, 9, 0.92));
 }
 
 .contact-grid {
@@ -465,8 +607,8 @@ main {
 
 .contact-card {
     border-radius: 18px;
-    border: 1px solid rgba(53, 255, 122, 0.2);
-    background: rgba(8, 12, 26, 0.85);
+    border: 1px solid rgba(230, 182, 92, 0.2);
+    background: rgba(16, 13, 9, 0.85);
     padding: 20px;
     box-shadow: var(--shadow);
 }
@@ -487,11 +629,11 @@ main {
 }
 
 .map-frame {
-    border: 1px solid rgba(107, 44, 255, 0.4);
+    border: 1px solid rgba(230, 182, 92, 0.35);
     border-radius: 14px;
     overflow: hidden;
     min-height: 240px;
-    background: radial-gradient(circle, rgba(53, 255, 122, 0.12), transparent 60%);
+    background: radial-gradient(circle, rgba(230, 182, 92, 0.12), transparent 60%);
     position: relative;
 }
 
@@ -500,7 +642,7 @@ main {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    border: 1px solid rgba(53, 255, 122, 0.18);
+    border: 1px solid rgba(230, 182, 92, 0.18);
 }
 
 .map-frame iframe {
@@ -516,11 +658,11 @@ main {
     position: relative;
     padding: clamp(24px, 5vw, 48px);
     border-radius: 24px;
-    border: 1px solid rgba(107, 44, 255, 0.38);
+    border: 1px solid rgba(230, 182, 92, 0.28);
     background:
-        radial-gradient(600px 260px at -10% 0%, rgba(53, 255, 122, 0.18), transparent 70%),
-        radial-gradient(600px 300px at 110% 120%, rgba(107, 44, 255, 0.22), transparent 72%),
-        rgba(8, 12, 30, 0.9);
+        radial-gradient(600px 260px at -10% 0%, rgba(230, 182, 92, 0.16), transparent 70%),
+        radial-gradient(600px 300px at 110% 120%, rgba(193, 86, 62, 0.18), transparent 72%),
+        rgba(16, 13, 9, 0.92);
     box-shadow: var(--shadow);
     overflow: hidden;
 }
@@ -545,7 +687,7 @@ main {
 
 .footer {
     padding: 24px clamp(20px, 4vw, 64px) 36px;
-    border-top: 1px solid rgba(107, 44, 255, 0.28);
+    border-top: 1px solid rgba(230, 182, 92, 0.2);
     color: var(--muted);
     text-align: center;
     font-weight: 600;
@@ -558,15 +700,20 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .gallery {
-        grid-auto-rows: 150px;
+    .tattoo-grid {
+        grid-template-columns: 1fr;
     }
 
-    .span-2,
-    .span-row-2 {
-        grid-column: auto;
-        grid-row: auto;
-        min-height: 0;
+    .artist-card {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 24px 18px 68px;
+    }
+
+    main {
+        padding: 32px 18px 64px;
     }
 }
 
@@ -582,5 +729,40 @@ main {
 
     main {
         padding-top: 28px;
+    }
+
+    .hero-content {
+        margin-top: 28px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 11vw, 2.7rem);
+    }
+
+    .lead {
+        font-size: 0.98rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .artist-card {
+        padding: 16px;
+    }
+
+    .artist-photo {
+        min-height: 120px;
+    }
+
+    .team-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 14px;
+        margin: 10px auto;
+    }
+
+    .tattoo-card {
+        aspect-ratio: 3 / 4;
     }
 }

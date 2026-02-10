@@ -3,38 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEÓN TATTO</title>
+    <title>Daniel Acoltzi | Portafolio</title>
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='media/daniel_profile.jpg') }}">
+    <meta name="description" content="Portafolio de Daniel Acoltzi Velasco: tatuaje con raíz prehispánica y carácter urbano desde Apizaco.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Daniel Acoltzi | Portafolio">
+    <meta property="og:description" content="Tinta con linaje: geometría ritual, tradición y trabajo de calle.">
+    <meta property="og:image" content="{{ url_for('static', filename='media/daniel_profile.jpg', _external=True) }}">
+    <meta property="og:image:alt" content="Retrato de Daniel Acoltzi Velasco">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniel Acoltzi | Portafolio">
+    <meta name="twitter:description" content="Tinta con linaje: geometría ritual, tradición y trabajo de calle.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='media/daniel_profile.jpg', _external=True) }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div class="page">
         <header class="hero">
             <nav class="nav">
-                <div class="brand">NEÓN<span>TATTO</span></div>
+                <div class="brand">Daniel <span>Acoltzi</span></div>
                 <div class="nav-links">
-                    <a href="#artists">Artistas</a>
+                    <a href="#artists">Historia</a>
                     <a href="#portfolio">Portafolio</a>
-                    <a href="#book">Reserva</a>
+                    <a href="#process">Proceso</a>
                     <a href="#contact">Contacto</a>
                 </div>
             </nav>
 
             <div class="hero-content">
-                <p class="eyebrow">Calle, oficio, legado</p>
-                <h1>Mitlan vibra en neón.</h1>
+                <p class="eyebrow">Tradición de calle</p>
+                <h1>Daniel Acoltzi: tinta con linaje.</h1>
                 <p class="lead">
-                    Un espacio oscuro donde el verde y el morado laten como ciudad
-                    y madrugada. El viaje al Mitlan camina con dos hermanos de oficio
-                    y calle: Daniel Acoltzi Velasco y Juan Sebastian Acoltzi Velasco.
-                    Estilo prehispánico tradicional con elegancia malandra, piel que
-                    cuenta historia y respeto.
+                    Desde Apizaco, su trazo nace del barrio y dialoga con lo ancestral.
+                    Cada pieza es un acto de respeto a la raíz prehispánica y a la memoria
+                    de sus ancestros, fusionada con la crudeza y honestidad de la calle.
+                    Líneas limpias, composición precisa y simbolismo profundo: tatuajes
+                    que no adornan, marcan historia.
                 </p>
                 <div class="hero-actions">
                     <a class="btn btn-primary" href="#portfolio">Ver portafolio</a>
-                    <a class="btn btn-ghost" href="#book">Reservar sesión</a>
+                    <a class="btn btn-ghost" href="#process">Conocer el proceso</a>
                 </div>
             </div>
 
@@ -44,43 +55,41 @@
 
         <main>
             <section id="artists" class="section artists">
-                <div class="section-header">
-                    <p class="section-eyebrow">Artistas</p>
-                    <h2>Hermandad, calle y ceremonia.</h2>
-                    <p>
-                        Dos manos, un mismo pulso: elegancia malandra, trabajo duro y raíz antigua.
-                    </p>
-                </div>
-
                 <div class="artist-grid">
-                    <article class="artist-card">
-                        <div class="artist-badge">Daniel Acoltzi Velasco</div>
-                        <p class="artist-handle">@_yolteotl_</p>
-                        <h3>Ritual prehispánico y línea sagrada</h3>
-                        <p>
-                            Tinta que respira tierra y fuego. Geometría ceremonial,
-                            silencio profundo y un pulso de calle que no se rinde.
-                        </p>
-                        <ul class="tags">
-                            <li>Geométrico</li>
-                            <li>Ritual</li>
-                            <li>Línea</li>
-                        </ul>
+                    <article class="artist-card artist-card-feature">
+                        <div class="artist-photo">
+                            <img class="team-avatar" src="{{ url_for('static', filename='media/daniel_profile.jpg') }}" alt="Retrato de Daniel Acoltzi Velasco">
+                        </div>
+                        <div class="artist-body">
+                            <div class="artist-badge">Daniel Acoltzi Velasco</div>
+                            <p class="artist-handle">@_yolteotl_</p>
+                            <h3>No vengo de la comodidad, vengo del proceso.</h3>
+                            <p>
+                                La calle me enseñó a resistir, el estudio a trabajar con paciencia y el
+                                linaje a no olvidar de dónde vengo.
+                            </p>
+                            <p>
+                                En cada tatuaje dejo algo mío. En cada mural se queda un fragmento de
+                                lo que soy. Cada diseño nace desde la gratitud y el respeto a los
+                                ancestros, a su legado y a las personas que han marcado mi camino.
+                            </p>
+                            <ul class="tags">
+                                <li>Blackwork</li>
+                                <li>Ritual</li>
+                                <li>Linaje</li>
+                                <li>Disciplina</li>
+                            </ul>
+                        </div>
                     </article>
-
-                    <article class="artist-card">
-                        <div class="artist-badge">Juan Sebastian Acoltzi Velasco</div>
-                        <p class="artist-handle">@katman_tattoo</p>
-                        <h3>Mitología viva y negro profundo</h3>
-                        <p>
-                            Noche de calle, oficio de años. Figuras del Mitlan,
-                            contraste feroz y neón que corta la sombra.
-                        </p>
-                        <ul class="tags">
-                            <li>Mitología</li>
-                            <li>Blackwork</li>
-                            <li>Textura</li>
-                        </ul>
+                    <article class="artist-card story-card">
+                        <div class="artist-photo artist-photo-placeholder">Trayecto</div>
+                        <div class="artist-body">
+                            <p>
+                                Trayecto: lo nuevo convive con lo antiguo sin imponerse; no se trata de
+                                repetir la tradición, sino de honrarla y mantenerla viva; mi trabajo no
+                                busca adornar, busca acompañar, contar y agradecer.
+                            </p>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -88,44 +97,70 @@
             <section id="portfolio" class="section portfolio">
                 <div class="section-header">
                     <p class="section-eyebrow">Portafolio</p>
-                    <h2>Galería minimal</h2>
+                    <h2>Portafolio de Daniel Acoltzi</h2>
                     <p>
-                        Piezas breves y filosas: raíz antigua, brillo de calle y corazón firme.
+                        Una selección de piezas donde la tradición se siente calle:
+                        trazo limpio, ritmo ceremonial y carácter directo.
                     </p>
                 </div>
 
-                <div class="gallery">
-                    <article class="gallery-item tone-a span-2">
-                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
-                        <h3>Guardián del fuego</h3>
+                <div class="tattoo-grid">
+                    <figure class="tattoo-card">
+                        <video class="tattoo-media" src="{{ url_for('static', filename='media/daniel_tatto1.mp4') }}" autoplay muted loop playsinline preload="metadata"></video>
+                        <figcaption>
+                            <p class="tattoo-meta">Danny — Daniel Acoltzi Velasco</p>
+                            <h3>Guardián del fuego</h3>
+                        </figcaption>
+                    </figure>
+                    <figure class="tattoo-card">
+                        <video class="tattoo-media" src="{{ url_for('static', filename='media/daniel_tatto2.mp4') }}" autoplay muted loop playsinline preload="metadata"></video>
+                        <figcaption>
+                            <p class="tattoo-meta">Danny — Daniel Acoltzi Velasco</p>
+                            <h3>Ruta obsidiana</h3>
+                        </figcaption>
+                    </figure>
+                    <figure class="tattoo-card">
+                        <video class="tattoo-media" src="{{ url_for('static', filename='media/daniel_tatto3.mp4') }}" autoplay muted loop playsinline preload="metadata"></video>
+                        <figcaption>
+                            <p class="tattoo-meta">Danny — Daniel Acoltzi Velasco</p>
+                            <h3>Serpiente de luz</h3>
+                        </figcaption>
+                    </figure>
+                    <figure class="tattoo-card">
+                        <video class="tattoo-media" src="{{ url_for('static', filename='media/daniel_tatto4.mp4') }}" autoplay muted loop playsinline preload="metadata"></video>
+                        <figcaption>
+                            <p class="tattoo-meta">Danny — Daniel Acoltzi Velasco</p>
+                            <h3>Portal ritual</h3>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="process" class="section process">
+                <div class="section-header">
+                    <p class="section-eyebrow">Proceso</p>
+                    <h2>De la idea al linaje en la piel</h2>
+                    <p>
+                        Trabajo cercano, claro y detallado: escuchamos tu historia, dibujamos
+                        la ruta y cuidamos cada línea con disciplina.
+                    </p>
+                </div>
+                <div class="gallery process-grid">
+                    <article class="gallery-item tone-a">
+                        <p class="gallery-meta">01 / Escucha</p>
+                        <h3>Historia personal</h3>
                     </article>
                     <article class="gallery-item tone-b">
-                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
-                        <h3>Ruta obsidiana</h3>
+                        <p class="gallery-meta">02 / Boceto</p>
+                        <h3>Geometría ritual</h3>
                     </article>
                     <article class="gallery-item tone-c">
-                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
-                        <h3>Serpiente de luz</h3>
+                        <p class="gallery-meta">03 / Piel</p>
+                        <h3>Trazo preciso</h3>
                     </article>
-                    <article class="gallery-item tone-d span-row-2">
-                        <p class="gallery-meta">Daniel Acoltzi Velasco</p>
-                        <h3>Portal ritual</h3>
-                    </article>
-                    <article class="gallery-item tone-e">
-                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
-                        <h3>Águila nocturna</h3>
-                    </article>
-                    <article class="gallery-item tone-f span-2">
-                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
-                        <h3>Rostro del inframundo</h3>
-                    </article>
-                    <article class="gallery-item tone-g">
-                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
-                        <h3>Sendero sagrado</h3>
-                    </article>
-                    <article class="gallery-item tone-h">
-                        <p class="gallery-meta">Juan Sebastian Acoltzi Velasco</p>
-                        <h3>Corazón de jade</h3>
+                    <article class="gallery-item tone-d">
+                        <p class="gallery-meta">04 / Cuidado</p>
+                        <h3>Sanación correcta</h3>
                     </article>
                 </div>
             </section>
@@ -133,16 +168,16 @@
             <section id="book" class="section cta">
                 <div class="cta-card">
                     <p class="section-eyebrow">Citas</p>
-                    <h2>Traza tu ruta al Mitlan</h2>
+                    <h2>Traza tu ruta al Mictlán</h2>
                     <p>
-                        Cuenta tu idea, tu lugar y tu historia. Creamos una pieza
-                        con raíz prehispánica, trabajo duro y neón vivo.
+                        Cuéntanos tu idea, tu lugar y tu historia. Creamos una pieza
+                        con raíz prehispánica, trabajo disciplinado y energía de calle.
                     </p>
                     <div class="cta-actions">
                         <a class="btn btn-primary" href="mailto:book@neotattoo.studio">
                             Agenda tu cita
                         </a>
-                        <a class="btn btn-ghost" href="#artists">Conoce a los artistas</a>
+                        <a class="btn btn-ghost" href="#artists">Conoce la historia</a>
                     </div>
                 </div>
             </section>
@@ -171,9 +206,6 @@
                     <article class="contact-card">
                         <h3>WhatsApp & correo</h3>
                         <p class="contact-line">
-                            Sebastian: <a href="https://wa.me/5212413414653">+52 1 241 341 4653</a>
-                        </p>
-                        <p class="contact-line">
                             Correo: <a href="mailto:acoltzisebastian2@gmail.com">acoltzisebastian2@gmail.com</a>
                         </p>
                         <p class="contact-line">
@@ -198,7 +230,7 @@
         </main>
 
         <footer class="footer">
-            <p>© 2026 NEÓN TATTO — Viaje al Mitlan</p>
+            <p>© 2026 Daniel Acoltzi — Tradición de calle</p>
         </footer>
     </div>
 
